@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MyBatis의 전역 설정을 정의하는 파일-->
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>  <!-- 동작방식을 제어-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <typeAliases>  <!-- 패키지 단위의 타입의 별칭등록하여, 간단하게 부를수있어짐.-->
+        <package name="org.scoula.security.account.domain"/>
+        <package name="org.scoula.board.domain"/>
+    </typeAliases>
+
+</configuration>

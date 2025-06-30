@@ -4,7 +4,7 @@ const props = defineProps({             // menus 배열 props 받음
   menus: { Type: Array, required: true },
 });
 </script>
-MenuGroup.vue
+
 <template>
   <!-- 네비게이션리스트-->
   <ul class="navbar-nav">

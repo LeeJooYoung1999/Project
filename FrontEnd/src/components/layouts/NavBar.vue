@@ -1,5 +1,4 @@
 <script setup>
-
 import { reactive, computed } from 'vue'; // Vue의 Composition API에서 반응형 객체와 계산 속성을불러옴
 import config from '@/config';            // 전역 설정값을 담고있는 config파일을 불러옴(현재 코드에서는 사용되지않음)
 import MenuGroup from './menu/MenuGroup.vue';
@@ -25,7 +24,7 @@ const toggleNavShow = () => (state.isNavShow = !state.isNavShow);
 
 <template>
   <!--부트스트랩 스타일이 적용된 최상위 네비게이션바-->
-  <nav class="navbarnavbar-expand-smbg-primary navbar-dark">
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
     <!--반응형 레이아웃을 위한 컨테이너-->
     <div class="container-fluid">
       <!--홈으로 이동하는 라우터링크, 브랜드영역-->
@@ -55,3 +54,4 @@ const toggleNavShow = () => (state.isNavShow = !state.isNavShow);
     </div>
   </nav>
 </template>
+<style></style>

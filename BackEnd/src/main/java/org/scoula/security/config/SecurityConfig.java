@@ -88,9 +88,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     // 접근 제한무시경로설정–resource
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/assets/**", "/*", "/api/member/**");
-        //Swagger 관련url은 보안에서 제외  =>  for 개발편의성. (프론트엔드와 백엔드가 분리된 구조에서 Swagger로 빠르게 API 문서 확인 및 테스트)
-        "/swagger-ui.html", "/webjars/**", "/swagger-resources/**", "/v2/api-docs"
+        web.ignoring().antMatchers("/assets/**", "/*", "/api/member/**",
+                //Swagger 관련url은 보안에서 제외  =>  for 개발편의성. (프론트엔드와 백엔드가 분리된 구조에서 Swagger로 빠르게 API 문서 확인 및 테스트)
+                "/swagger-ui.html", "/webjars/**", "/swagger-resources/**", "/v2/api-docs"
+        );
     }
 
     @Override

@@ -2,11 +2,9 @@
 // ++) 읽기/쓰기 둘다 가능한 저장소는? => Pinia Store
 
 export default {
-  title: 'Scoula',
-  // 메인 타이틀
+  title: 'Scoula',                            // 메인 타이틀
   subtitle: 'KB Fullstack 학습(Vue+Spring)', // 서브 타이틀
-  menus: [
-    // 메인 메뉴구성정보
+  menus: [                                   // 메인 메뉴구성정보
     {
       title: '게시판',
       url: '/board/list',
@@ -23,8 +21,7 @@ export default {
       icon: 'fa-regular fa-images',
     },
   ],
-  accoutMenus: {
-    // 인증 관련메뉴정보
+  accoutMenus: {            // 인증 관련메뉴정보
     login: {
       url: '/auth/login',
       title: '로그인',

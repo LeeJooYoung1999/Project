@@ -7,7 +7,7 @@ export default [
   {
     path: '/auth/join',
     name: 'join',
-    component: () => import('../pages/auth/JoinPage.vue'),
+    component: () => import('../pages/auth/JoinPage.vue'),  //회원과 관련된 라우팅정보는 모두 auth.js에 정의
   },
   {
     path: '/auth/profile',

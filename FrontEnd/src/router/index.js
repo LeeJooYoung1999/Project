@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '../pages/HomePage.vue';
+import authRoutes from './auth';
 
-// import authRoutes from './auth';
 // import boardRoutes from './board';
 // import travelRoutes from './travel';
 // import galleryRoutes from './gallery';
@@ -14,7 +14,7 @@ const router = createRouter({
       name: 'home',
       component: HomePage,
     },
-    // ...authRoutes,
+    ...authRoutes,
     // ...boardRoutes,
     // ...travelRoutes,
     // ...galleryRoutes, 

@@ -2,6 +2,7 @@ package org.scoula.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import lombok.extern.log4j.Log4j2;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
@@ -19,9 +20,10 @@ import javax.sql.DataSource;
 
 @Configuration
 @PropertySource({"classpath:/application.properties"})
-@MapperScan(basePackages = {"org.scoula.board.mapper"})
-@ComponentScan(basePackages = {"org.scoula.board.service"})
+@MapperScan(basePackages = {"org.scoula.board.mapper", "org.scoula.member.mapper"})
+@ComponentScan(basePackages = {"org.scoula.board.service", "org.scoula.member.service"})
 @EnableTransactionManagement
+@Log4j2
 public class RootConfig {
     @Value("${jdbc.driver}")
     String driver;

@@ -1,6 +1,7 @@
 package org.scoula.security.account.domain;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@Builder  //MemberJoinDTO에서 가져다 쓰기위해 @Builder 어노테이션 추가.
 public class MemberVO {
     private String username;
     private String password;

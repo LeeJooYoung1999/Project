@@ -2,6 +2,7 @@
 
 import { ref, computed, reactive } from 'vue';
 import { defineStore } from 'pinia';
+import axios from '@/api';
 
 //서버로부터 받은 인증정보
 const initState = {
@@ -21,11 +22,11 @@ export const useAuthStore = defineStore('auth', () => {
   
   //로그인시 호출할 비동기함수 정의.
   const login = async (member) => {
-    state.value.token = 'test token';
-    state.value.user = {
-      username: member.username,
-      email: member.username + '@test.com',
-    };
+    // state.value.token = 'test token';
+    // state.value.user = {
+    //   username: member.username,
+    //   email: member.username + '@test.com',
+    // };
 
     // api 호출
     const { data } = await axios.post('/api/auth/login', member);

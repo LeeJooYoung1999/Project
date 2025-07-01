@@ -48,5 +48,5 @@
             update_date = now()
         WHERE username = #{username}
     </update>
-    
+
 </mapper>

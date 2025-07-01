@@ -45,5 +45,12 @@ export default {
     const { data } = await api.put(`${BASE_URL}/${member.username}`, formData, headers);
     console.log('AUTH PUT: ', data);
     return data;
-  }
+  },
+  
+  async changePassword(formData) {
+    //비밀번호 변경 - PUT요청
+    const { data } = await api.put(`${BASE_URL}/${formData.username}/changepassword`, formData);
+    console.log('AUTH PUT: ', data);
+    return data;
+  },
 };

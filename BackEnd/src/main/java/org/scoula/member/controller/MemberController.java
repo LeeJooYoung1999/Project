@@ -5,6 +5,7 @@ package org.scoula.member.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.scoula.common.util.UploadFiles;
+import org.scoula.member.dto.ChangePasswordDTO;
 import org.scoula.member.dto.MemberDTO;
 import org.scoula.member.dto.MemberJoinDTO;
 import org.scoula.member.dto.MemberUpdateDTO;
@@ -46,6 +47,13 @@ public class MemberController {
     @PutMapping("/{username}")
     public ResponseEntity<MemberDTO> changeProfile(MemberUpdateDTO member) {
         return ResponseEntity.ok(service.update(member));
+    }
+
+    @PutMapping("/{username}/changepassword")
+    public ResponseEntity<?> changePassword(@RequestBody ChangePasswordDTO changePasswordDTO) {
+        //id,pw를 JSON형태로 받을거라, @RequestBody 설정해줬음 주의!!
+        service.changePassword(changePasswordDTO); //비밀번호 변경 수행하라
+        return ResponseEntity.ok().build();  //본문(body) 없이 상태(성공여부)만 전송합니다.
     }
 
 }

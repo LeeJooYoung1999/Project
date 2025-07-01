@@ -35,8 +35,8 @@ export const useAuthStore = defineStore('auth', () => {
 
   //로그아웃시 호출할 함수 정의.
   const logout = () => {
-    localStorage.clear();
-    state.value = { ...initState }; //state값을 초기값으로 리셋.
+    localStorage.clear();           //1. 로컬스토리지 초기화
+    state.value = { ...initState }; //2. 상태state값을 초기값으로 리셋.
   };
   const getToken = () => state.value.token; //token을 갖고 axios로 서버와 통신할 때 언제든 token값을 얻기위한 함수 정의.
 

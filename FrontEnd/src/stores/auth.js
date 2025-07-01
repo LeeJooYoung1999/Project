@@ -49,7 +49,11 @@ export const useAuthStore = defineStore('auth', () => {
     }
   };
 
-  load();
+  const changeProfile = (member) => { //회원정보 수정용
+    state.value.user.email = member.email;                      //1.  pinia 중앙저장소 수정
+    localStorage.setItem('auth', JSON.stringify(state.value));  //2. localStorage값 수정
+  };
 
-  return { state, username, email, isLogin, login, logout, getToken };
+  load();
+  return { state, username, email, isLogin, changeProfile, login, logout, getToken };
 });
